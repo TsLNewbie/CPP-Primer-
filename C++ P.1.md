@@ -136,3 +136,44 @@ Microflop::wanda("Go dacing?"); //use Microflop namespace version
 Piscine::wanda("a fish name Desire");// use Piscine namespace version
 ```
 
+按照这种方式，类、函数和变量便是C++编译器的标准组件。它们都被放置在名称空间std中。
+仅当头文件没有扩展名h时，情况才是如此。
+这意思是：iostream 中定义的cout变量实际上是 std::cout。
+endl = std::endl
+
+*：通常这种情况太麻烦了，所以这个就很重要。*
+```c++
+using namespace std;
+```
+这样使得std名称空间里的所有名称都可以用。是一种偷懒的办法。但是如果是大型程序，也是一个潜在的问题。、
+所以更好的办法，只使所需的名称可以用，可以通过using声明来实现。
+
+```c++
+using std::cout;  // make cout available
+using std::endl;  // make endl available
+using std::cin;   // make cin  available
+
+using namespace std; // make all names of std available.
+
+
+```
+
+### cout 进行C++输出
+
+先看看如何输出消息的。
+
+```c++
+
+int main()
+{
+
+cout << "Hello World" << endl;
+
+}
+```
+
+**cout ：** cout 对象
+**<< ：** 插入运算符
+**"Hello World"** ： 字符串
+
+cout << "Hello World" << endl;
