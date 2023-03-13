@@ -352,3 +352,44 @@ printf()就必须得要用特殊代码（%s和%d）来指出打印的是字符�
 如果让printf()打印字符串，但又错误的提供了一个整数，就会显示一堆乱码。
 
 ## 其他C++ 语句
+先看看程序：
+```c++
+// getinfo.cpp
+#include <iostream>
+
+int main()
+{
+  using namespace std;
+  
+  int carrots;
+  
+  cout<< "How many carrots do you have?" << endl;
+  cin >> carrots;
+  cout << "Here are two more.";
+  carrots = carrots + 2;
+  cout << "Now you have " << carrots << " carrots." << endl;
+  return 0;
+
+
+}
+```
+
+结果：
+```
+How many carrots do you have?
+114514
+Here are two more.Now you have 114516 carrots.
+```
+
+### 使用cin
+
+键盘输入的值（114514）最终赋给变量carrots.
+对这一个过程有更为正式的描述：
+就像是C++将输出看作是流出程序的字符流一样，它也将输入看作是流入程序的字符流。
+iostream文件将cin定义为一个表示这种流的对象。
+输出时，<<运算符将字符串插入到输出流中。
+输入时，cin使用>>运算符从输入流中抽取字符。
+与cout一样，cin也是智能对象，它可以将通过键盘输入的一系列字符转换为接收信息的变量能够接受的形式。
+
+### 使用cout 进行拼接。
+
