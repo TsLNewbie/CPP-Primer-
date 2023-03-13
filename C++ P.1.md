@@ -4,8 +4,12 @@ category: /小书匠/日记/2023-03
 renderNumberedHeading: true
 grammar_cjkRuby: true
 ---
+[toc!]
+
 
 ## 初次进入C++世界
+
+
 
 ### 进入C++
 C++ 是用 cout 生成字符输出。
@@ -260,3 +264,64 @@ int main (); // Valid
 
 ## C++语句。
 
+
+程序：
+
+```c++
+#include <iostream>
+
+int main()
+{
+ using namespace std;
+ 
+ int carrots;       //declare an integer variable
+ 
+ carrots = 25;      //assign a value to the variable
+ cout << "I have "; << carrots << "carrots." << endl;  //carrots = display the value of the variable
+ carrots = carrots - 1;  // modify the variable
+ cout <<"Crunch, crunch. Now I have " << carrots << "carrots." <<endl;
+ return 0;
+
+
+}
+```
+效果：
+```
+I have 25carrots.
+Crunch, crunch. Now I have 24carrots.
+```
+
+### 声明语句和变量
+
+```c++
+int carrots;
+```
+这条语句提供了两项消息。需要的内存和内存单元的名称：
+被存储的数据类型：int
+变量名：carrots
+具体来说，这条语句指出程序需要足够的存储空间来存储一个整数，在C++中int代表一个无小数点的整数。
+编译器负责分配和标记内存的细节。
+
+第二个任务则是给存储单元指定名称：carrots.
+
+### 赋值语句
+
+```c++
+carrots = 25;
+```
+符号 " = " 为赋值运算符，而C++/C有一项不寻常的特性————可以连续使用赋值运算符。
+比如以下程序：
+
+```c++
+int steinway;
+int baldwin;
+int yamaha;
+yamaha = baldwin = steinway = 88;
+```
+以上程序的情况是：
+赋值将会从右到走进行，首先88先赋值给steinway，然后steinway的值（88)赋值给baldwin，而最后baldwin (88)会赋值给 yamaha.
+
+在赋值里，可以进行修改，比如：
+```C++
+
+```
