@@ -393,6 +393,7 @@ iostream文件将cin定义为一个表示这种流的对象。
 
 ### 使用cout 进行拼接。
 
-```c++
-int xx;
+getinfo.cpp中的另一项新特性是将4条输出语句合并为一条。 iostream 文件定义了 << 运算符。便可以像下面这样合并（并接）输出：
+```
+cout << "Now you have" << carrots << " carrots." << endl;
 ```
